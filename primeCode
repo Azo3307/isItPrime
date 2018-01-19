@@ -1,0 +1,56 @@
+class ViewController: UIViewController {
+
+    
+    @IBOutlet weak var userNumber: UITextField!
+    
+    @IBOutlet weak var answerLabel: UILabel!
+    
+    @IBAction func primeButton(_ sender: Any) {
+        
+        print("Button Pressed")
+        
+        var i = 2
+        
+        var isItPrime = true
+        
+        if let number = Int(userNumber.text!){
+            
+            
+            
+            if number == 1 {
+                
+                isItPrime = false
+                
+            }
+            
+            while i < number {
+                
+                if number % i == 0 {
+                    
+                    isItPrime = false
+                    
+                }
+                
+                i += 1
+                
+            }
+            
+            if isItPrime == true{
+                
+                print(isItPrime)
+                
+                answerLabel.text = "\(userNumber!) is prime!"
+            
+            } else {
+                
+                print(isItPrime)
+                
+                answerLabel.text = "\(userNumber!) is not prime."
+        
+    }
+    
+}
+    }
+    
+    
+    
